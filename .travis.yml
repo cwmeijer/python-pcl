@@ -9,6 +9,7 @@ install:
   - "cd boost_1_54_0/"
   - "./bootstrap.sh"
   - "./b2 install"
+  - "cd .."
   - "sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl -y"
   - "sudo apt-get update"
   - "sudo apt-get install libpcl-all"
