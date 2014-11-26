@@ -3,12 +3,12 @@ python:
   - "2.7"  
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install:
-  - "pip install cython"
-  - "wget -c 'http://sourceforge.net/projects/boost/files/boost/1.54.0/boost_1_54_0.tar.bz2/download'"
+  - "pip install cython -q"
+  - "wget -c -q 'http://sourceforge.net/projects/boost/files/boost/1.54.0/boost_1_54_0.tar.bz2/download'"
   - "tar xf download"
-  - "cd boost_1_54_0/"
-  - "./bootstrap.sh"
-  - "./b2 install"
+  - "cd boost_1_54_0/" # We specifically need this version of Boost, Ubuntu 12.04 is too far behind
+  - "./bootstrap.sh >/dev/null"
+  - "./b2 install >/dev/null"
   - "cd .."
   - "sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl -y"
   - "sudo apt-get update"
