@@ -7,6 +7,8 @@ install:
   - "sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl -y"
   - "sudo apt-get update"
   - "sudo apt-get install libpcl-all"
+  - "pwd"
+  - "ls"
   - "ldd pcl/registration.so"
   - "env"
 # command to run tests, e.g. python setup.py test
